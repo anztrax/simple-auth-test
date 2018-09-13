@@ -1,0 +1,154 @@
+{
+	"id": "2486c56b-5e3d-4800-be0b-2677fa17e76d",
+	"name": "empat kali",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"f8c8d3bc-b4d0-4965-b708-1f7d27ecce8e",
+		"180e9e3c-086b-426b-b674-c62845327e4d",
+		"44583cbc-f3ba-461c-8f00-758e66c3c9b6",
+		"65b6b711-0e3b-470c-93ad-63568d39aa95",
+		"84f84f34-1009-4078-ab39-f71b5dbd1c09",
+		"2247bf9a-9a78-4d8e-b87a-3453e65c7554"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "180e9e3c-086b-426b-b674-c62845327e4d",
+			"name": "login",
+			"url": "localhost:6100/login",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"email\" : \"kuro.ketanitem1@gmail.com\",\n\t\"password\" : \"KuroKetan123\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2247bf9a-9a78-4d8e-b87a-3453e65c7554",
+			"name": "pay transaction",
+			"url": "localhost:6100/pay",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"JWTToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0MjA5YzUyLTVkMjQtNDlmNS05NDYyLWYxZWI4ZWQ3ZjdmNiIsIm5hbWUiOiJoZWxsbyIsImVtYWlsIjoia3Vyby5rZXRhbml0ZW1AZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIrNjI4MzgwNzY5MjM4NSIsInBhc3N3b3JkIjoiJDJiJDEyJHEyRllUMEV6dTk3VGJORlBOSnhYdk91UXouc3pDcFREU0FQVXdJQVhOT3MyMXluMHlKMjllIiwiSldUVG9rZW4iOiIiLCJpc09UUEFjdGl2ZSI6ZmFsc2UsImlzVmVyaWZpZWQiOmZhbHNlLCJjcmVhdGVkQXQiOiIxNTM2ODMyMDk4OTM4IiwidXBkYXRlZEF0IjoiMTUzNjgzMjA5ODkzOCIsImlhdCI6MTUzNjgzMjEwNSwiZXhwIjoxNTM2OTE4NTA1fQ.schp8-VIEswpDmm_6oIrgPxYKjhOzrWXeRJr5OhR6Nw\",\n\t\"transactionId\" : \"1e93e6eb-9362-4d45-80c3-7b936412de0a\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "44583cbc-f3ba-461c-8f00-758e66c3c9b6",
+			"name": "requestOTP",
+			"url": "localhost:6001/requestOTPCode",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"JWTToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb21lUGF5bG9hZCI6dHJ1ZSwiaWF0IjoxNTM2ODI5OTkwLCJleHAiOjE1MzY5MTYzOTB9.zya4YEtyHv5gKbd1OQ6BRliHHg5ZdNjheTEKLcv-_eY\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "65b6b711-0e3b-470c-93ad-63568d39aa95",
+			"name": "validate OTP",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "84f84f34-1009-4078-ab39-f71b5dbd1c09",
+			"name": "get transactions",
+			"url": "localhost:6100/transactions",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"JWTToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0MjA5YzUyLTVkMjQtNDlmNS05NDYyLWYxZWI4ZWQ3ZjdmNiIsIm5hbWUiOiJoZWxsbyIsImVtYWlsIjoia3Vyby5rZXRhbml0ZW1AZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIrNjI4MzgwNzY5MjM4NSIsInBhc3N3b3JkIjoiJDJiJDEyJHEyRllUMEV6dTk3VGJORlBOSnhYdk91UXouc3pDcFREU0FQVXdJQVhOT3MyMXluMHlKMjllIiwiSldUVG9rZW4iOiIiLCJpc09UUEFjdGl2ZSI6ZmFsc2UsImlzVmVyaWZpZWQiOmZhbHNlLCJjcmVhdGVkQXQiOiIxNTM2ODMyMDk4OTM4IiwidXBkYXRlZEF0IjoiMTUzNjgzMjA5ODkzOCIsImlhdCI6MTUzNjgzMjEwNSwiZXhwIjoxNTM2OTE4NTA1fQ.schp8-VIEswpDmm_6oIrgPxYKjhOzrWXeRJr5OhR6Nw\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f8c8d3bc-b4d0-4965-b708-1f7d27ecce8e",
+			"name": "register",
+			"url": "localhost:6100/register",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\" : \"hello\",\n\t\"phoneNumber\" : \"+6283807692385\",\n\t\"email\" : \"kuro.ketanitem@gmail.com\",\n\t\"password\" : \"KuroKetan123\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
