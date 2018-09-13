@@ -1,0 +1,25 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": null,
+  "database": "empatkali_db",
+  "synchronize": true,
+  "logging": ["query", "error"],
+  "entities": [
+    "src/database/entity/*.js"
+  ],
+  "subscribers": [
+    "src/database/subscriber/*.ts"
+  ],
+  "migrations": [
+    "src/database/migration/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "src/database/entity",
+    "migrationsDir": "src/database/migration",
+    "subscribersDir": "src/database/subscriber"
+  }
+}
